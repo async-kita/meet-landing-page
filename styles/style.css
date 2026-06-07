@@ -4,8 +4,10 @@
   /* Colors */
   --white: #fafafa;
   --cyan-300: #8fe3f9;
+  --cyan-400: #71c0d4;
   --cyan-600: #4d96a9;
   --purple-300: #d9b8ff;
+  --purple-400: #b18bdd;
   --purple-600: #855fb1;
   --slate-300: #d1d1df;
   --slate-600: #87879d;
@@ -110,14 +112,39 @@ body {
   color: var(--white);
   border-radius: var(--radius-29);
   cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.button:active {
+  transform: scale(0.95);
 }
 
 .button--cyan {
   background-color: var(--cyan-600);
 }
 
+.button--cyan:focus-visible {
+  outline: 0.125rem dashed var(--cyan-600);
+  outline-offset: 0.25rem;
+}
+
+.button--cyan span {
+  color: var(--cyan-300);
+}
+
 .button--purple {
   background-color: var(--purple-600);
+}
+
+.button--purple:focus-visible {
+  outline: 0.125rem dashed var(--purple-600);
+  outline-offset: 0.25rem;
+}
+
+.button--purple span {
+  color: var(--purple-300);
 }
 
 .header {
@@ -186,13 +213,16 @@ body {
 }
 
 .advantage__photos {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: clamp(1rem, 0.422rem + 2.465vw, 2rem);
 }
 
 .advantage__photo-wrapper {
   width: clamp(9.188rem, 8.889rem + 1.272vw, 9.5rem);
+  height: clamp(9rem, 4.955rem + 17.257vw, 16rem);
   border-radius: var(--radius-8);
   overflow: hidden;
 }
@@ -255,6 +285,16 @@ body {
 
 .footer__button {
   margin: 0 auto;
+}
+
+@media (hover: hover) {
+  .button--cyan:hover {
+    background-color: var(--cyan-400);
+  }
+
+  .button--purple:hover {
+    background-color: var(--purple-400);
+  }
 }
 
 @media (min-width: 768px) {
