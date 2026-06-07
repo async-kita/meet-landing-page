@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  /* Colors */
+  --white: #fafafa;
+  --cyan-300: #8fe3f9;
+  --cyan-600: #4d96a9;
+  --purple-300: #d9b8ff;
+  --purple-600: #855fb1;
+  --slate-300: #d1d1df;
+  --slate-600: #87879d;
+  --slate-900: #28283d;
+
+  /* Fonts */
+  --ff: "Red Hat Display", sans-serif;
+  --fs-1: clamp(2.5rem, 1.972rem + 2.254vw, 4rem);
+  --fs-2: clamp(2rem, 1.824rem + 0.751vw, 2.5rem);
+  --fs-3: clamp(0.75rem, 0.662rem + 0.376vw, 1rem);
+  --fs-4: clamp(1rem, 0.857rem + 0.298vw, 1.125rem);
+  --fs-5: 1rem;
+
+  /* Radius */
+  --radius-8: 0.5rem;
+  --radius-29: 1.813rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-family: var(--ff);
+  color: var(--slate-600);
+}
+
+.fs-1 {
+  font-size: var(--fs-1);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.fs-2 {
+  font-size: var(--fs-2);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.fs-3 {
+  font-size: var(--fs-3);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 0.25rem;
+}
+
+.fs-4 {
+  font-size: var(--fs-4);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.fs-5 {
+  font-size: var(--fs-5);
+  font-weight: 900;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.section-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-number__line {
+  width: 0.063rem;
+  height: 5rem;
+  background-color: var(--slate-300);
+}
+
+.section-number__num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  color: var(--slate-600);
+  background-color: var(--white);
+  border-radius: 50%;
+  border: 1px solid var(--slate-300);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.25rem;
+  padding: 1rem 2.5rem;
+  font-family: inherit;
+  background-color: transparent;
+  border: none;
+  color: var(--white);
+  border-radius: var(--radius-29);
+  cursor: pointer;
+}
+
+.button--cyan {
+  background-color: var(--cyan-600);
+}
+
+.button--purple {
+  background-color: var(--purple-600);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: clamp(3rem, 0.714rem + 4.762vw, 5rem);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: clamp(3rem, 1.569rem + 6.107vw, 4.5rem);
+  padding-block: 4rem;
+}
+
+.hero__images-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1.063rem;
+  max-width: 27.063rem;
+  width: 100vw;
+  height: clamp(10rem, 1.472rem + 36.387vw, 18.938rem);
+  overflow: hidden;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: clamp(1.5rem, 0rem + 3.125vw, 2rem);
+  width: clamp(19.25rem, 10.901rem + 35.623vw, 28rem);
+  padding-inline: 2.188rem;
+  text-align: center;
+}
+
+.hero__title {
+  color: var(--slate-900);
+}
+
+.hero__buttons {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  column-gap: 1.063rem;
+}
+
+.hero__button {
+  margin: 0 auto;
+}
+
+.advantage {
+  display: grid;
+  gap: 4rem;
+  padding: 2rem 2rem 4rem 2rem;
+}
+
+.advantage__photos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1rem, 0.422rem + 2.465vw, 2rem);
+}
+
+.advantage__photo-wrapper {
+  width: clamp(9.219rem, 5.3rem + 16.718vw, 16rem);
+  border-radius: var(--radius-8);
+  overflow: hidden;
+}
+
+.advantage__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.advantage__body {
+  display: grid;
+  gap: 2rem;
+  text-align: center;
+}
+
+.advantage__title-wrapper {
+  display: grid;
+  gap: 1rem;
+}
+
+.advantage__subtitle {
+  color: var(--cyan-600);
+  text-transform: uppercase;
+}
+
+.advantage__title {
+  color: var(--slate-900);
+}
+
+.footer {
+  color: var(--white);
+}
+
+.footer__number {
+  margin-bottom: -7%;
+}
+
+.footer__body {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-image:
+    linear-gradient(rgba(77, 150, 168, 0.9)),
+    url("../assets/mobile/image-footer.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer__content {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 31.5rem;
+}
+
+.footer__button {
+  margin: 0 auto;
+}

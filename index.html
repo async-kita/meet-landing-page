@@ -1,31 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Meet landing page</title>
-</head>
-<body>
-  Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
+    <link rel="icon" type="image/png" sizes="32x32"
+      href="./assets/favicon-32x32.png">
 
-  Download v1.3
-  What is it?
-
-  01
-  Built for modern use
-
-  Smarter meetings, all in one place
-
-  Send messages, share files, show your screen, and record your meetings — all in one 
-  workspace. Control who can join with invite-only team access, data encryption, and data export.
-
-  02
-  Experience more together
-  Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
-
-  Download v1.3
-</body>
+    <title>Frontend Mentor | Meet landing page</title>
+    <link rel="stylesheet" href="./styles/style.css">
+  </head>
+  <body>
+    <header class="header">
+      <a
+        class="header__logo"
+        href="#">
+        <img
+          class="header__logo-image"
+          src="./assets/logo.svg"
+          alt="Logo company Meet"
+          width="119"
+          height="28">
+      </a>
+    </header>
+    <main class="content">
+      <section class="hero">
+        <div class="hero__images-wrapper">
+          <img
+            class="hero__image"
+            src="./assets/desktop/image-hero-left.png"
+            alt="Team photo"
+            width="394"
+            height="303">
+          <img
+            class="hero__image"
+            src="./assets/desktop/image-hero-right.png"
+            alt="Team photo"
+            width="394"
+            height="303">
+        </div>
+        <div class="hero__body">
+          <h1 class="hero__title fs-1">Group Chat for Everyone</h1>
+          <p class="hero__description fs-4">Meet makes it easy to connect with
+            others
+            face-to-face virtually and
+            collaborate across any device.</p>
+          <div class="hero__buttons">
+            <button
+              class="hero__button button button--cyan fs-5"
+              type="button">
+              Download
+              <span>v1.3</span>
+            </button>
+            <button
+              class="hero__button button button--purple fs-5"
+              type="button">
+              What is it?
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="advantage">
+        <div class="advantage__number section-number">
+          <span class="section-number__line"></span>
+          <span class="advantage__number section-number__num fs-5">01</span>
+        </div>
+        <div class="advantage__photos">
+          <div class="advantage__photo-wrapper">
+            <img
+              class="advantage__photo"
+              src="./assets/desktop/image-woman-in-videocall.jpg"
+              alt="Woman in video call"
+              width="510"
+              height="484">
+          </div>
+          <div class="advantage__photo-wrapper">
+            <img
+              class="advantage__photo"
+              src="./assets/desktop/image-women-videochatting.jpg"
+              alt="Women video chatting"
+              width="510"
+              height="484">
+          </div>
+          <div class="advantage__photo-wrapper">
+            <img
+              class="advantage__photo"
+              src="./assets/desktop/image-men-in-meeting.jpg"
+              alt="Men in meeting"
+              width="510"
+              height="484">
+          </div>
+          <div class="advantage__photo-wrapper">
+            <img
+              class="advantage__photo"
+              src="./assets/desktop/image-man-texting.jpg"
+              alt="Man texting"
+              width="510"
+              height="484">
+          </div>
+        </div>
+        <div class="advantage__body">
+          <div class="advantage__title-wrapper">
+            <span class="advantage__subtitle fs-3">Built for modern use</span>
+            <h2 class="advantage__title fs-2">Smarter meetings, all in one
+              place</h2>
+          </div>
+          <p class="advantage__description">
+            Send messages, share files, show your screen, and record your
+            meetings — all
+            in one
+            workspace. Control who can join with invite-only team access, data
+            encryption, and data export.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__number section-number">
+        <span class="section-number__line"></span>
+        <span class="section-number__num fs-5">02</span>
+      </div>
+      <div class="footer__body">
+        <div class="footer__content">
+          <h2 class="footer__title fs-2">Experience more together</h2>
+          <p class="footer__description">Stay connected with reliable HD
+            meetings
+            and unlimited one-on-one and group
+            video sessions.</p>
+          <button
+            class="footer__button button button--purple fs-5"
+            type="button">
+            Download
+            <span>v1.3</span>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
